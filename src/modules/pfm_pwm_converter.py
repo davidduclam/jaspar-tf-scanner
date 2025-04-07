@@ -8,7 +8,7 @@ def pfm_to_pwm(pfm_dict):
     bg = np.array([0.25, 0.25, 0.25, 0.25])  # Background frequency for A, C, G, T
     total = np.sum(pfm_array, axis=0)  # Sum across all bases at each position
 
-    # Laplace smoothing using background frequency
+    # Adding pseudocount to avoid zero probabilities
     probabilities = (pfm_array + bg[:, None]) / (total + 1)
 
     pwm = np.log2(probabilities / bg[:, None])  # Log-odds conversion

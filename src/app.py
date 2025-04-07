@@ -1,5 +1,4 @@
 import streamlit as st
-
 from modules import jaspar_api
 
 # ---- STREAMLIT UI ----

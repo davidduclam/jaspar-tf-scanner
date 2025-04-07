@@ -16,7 +16,6 @@ def display_results(results):
             'Score': scores
         })
         #data['Positive'] = data['Score'] > 0  # Add a column to indicate scores above 0
-
         #st.scatter_chart(data, x='Position', y='Score', color='Positive')  # Use 'Highlight' for color
         
         st.scatter_chart(data, x='Position', y='Score')

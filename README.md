@@ -14,13 +14,13 @@ This project is a Streamlit web application that allows users to search for tran
 
 Watch the demonstration of the app on YouTube:
 
-[![Watch the demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[https://youtu.be/k1zaJC9YX-g](https://youtu.be/k1zaJC9YX-g)
 
 ## Usage
 
 The deployed application can be accessed through the following link:
 
-[https://share.streamlit.io/yourusername/jaspar-tf-scanner/app.py](https://share.streamlit.io/yourusername/jaspar-tf-scanner/app.py)
+[https://jaspar-tf-scanner.streamlit.app/](https://jaspar-tf-scanner.streamlit.app/)
 
 ## Running Locally
 
@@ -91,3 +91,4 @@ Alternatively, it can also be run locally on your own PC by following both the [
 - Streamlit
 - Requests
 - Pandas
+- NumPy
