@@ -1,6 +1,7 @@
 import streamlit as st
-from modules import binding_site_finder, jaspar_api, pfm_pwm_converter, results_viewer
+from modules import binding_site_finder, jaspar_api, pfm_pwm_converter
 from constants import SVG_BASE_URL
+from pages import results_viewer
 
 st.set_page_config(
     layout="wide"

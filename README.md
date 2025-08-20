@@ -29,7 +29,6 @@ Alternatively, it can also be run locally on your own PC by following both the [
 ### Installation
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/davidduclam/jaspar-tf-scanner.git
    cd jaspar-tf-scanner
@@ -38,6 +37,40 @@ Alternatively, it can also be run locally on your own PC by following both the [
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+   ```
+
+### Installation via Virtual Environment (recommended)
+Instead of installing all the dependencies, it is recommended to instead run ```pip``` inside a virtual environment
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/davidduclam/jaspar-tf-scanner.git
+   cd jaspar-tf-scanner
+   ```
+
+2. Navigate to: 
+   ```bash
+   cd jaspar-tf-scanner
+   ```
+
+3. Create the virtual environment:
+   ```bash
+   python3 -m venv venv
+   ````
+
+4. Activate the virtual environment:
+   ```bash
+   source venv/bin/activate
+   ````
+
+5. Install the requirements inside the virtual environment:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. To deactiavte the virtual environment
+   ```bash
+   deactivate
    ```
 
 ### Run
@@ -83,6 +116,7 @@ Alternatively, it can also be run locally on your own PC by following both the [
   - `pages/`: Contains all the pages of the application.
     - `binding_site_score.py`: Module for showing general information about the transcription factor, as well as finding binding sites based on a user-given DNA sequence.
 - `tests/`: Contains unit tests for the modules.
+   - `test_jaspar_api.py`: Tests for the JASPAR API
 - `requirements.txt`: Lists the dependencies.
 - `README.md`: Contains the project documentation.
 
@@ -92,3 +126,4 @@ Alternatively, it can also be run locally on your own PC by following both the [
 - Requests
 - Pandas
 - NumPy
+- Pytest
