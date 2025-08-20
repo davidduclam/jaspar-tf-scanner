@@ -24,7 +24,7 @@ The deployed application can be accessed through the following link:
 
 ## Running Locally
 
-Alternatively, it can also be run locally on your own PC by following both the [Installation](#installation) and [Run](#run-locally) sections, in order.
+Alternatively, you can run the application locally by following the steps in either the [Installation](#installation) or [Installation Using a Virtual Environment (Recommended)](#installation-using-a-virtual-environment-recommended) section, and then the [Run](#run) section, in order.
 
 ### Installation
 
@@ -34,43 +34,20 @@ Alternatively, it can also be run locally on your own PC by following both the [
    cd jaspar-tf-scanner
    ```
 
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Installation via Virtual Environment (recommended)
-Instead of installing all the dependencies, it is recommended to instead run ```pip``` inside a virtual environment
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/davidduclam/jaspar-tf-scanner.git
-   cd jaspar-tf-scanner
-   ```
-
-2. Navigate to: 
-   ```bash
-   cd jaspar-tf-scanner
-   ```
-
-3. Create the virtual environment:
+2. (**Recommended**) Create and activate a Python virtual environment to keep dependencies isolated:
    ```bash
    python3 -m venv venv
-   ````
-
-4. Activate the virtual environment:
-   ```bash
    source venv/bin/activate
-   ````
-
-5. Install the requirements inside the virtual environment:
-   ```bash
-   pip install -r requirements.txt
    ```
 
-6. To deactiavte the virtual environment
+   To deactivate the virtual environment when finished:
    ```bash
    deactivate
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
 ### Run
@@ -106,19 +83,21 @@ Instead of installing all the dependencies, it is recommended to instead run ```
 ## Project Structure
 
 - `src/`: Contains all the source code for the project.
-  - `app.py`: The main Streamlit application file.
-  - `constants.py`: Contains constants used throughout the project.
-  - `modules/`: Contains all the modules related to the project.
-    - `jaspar_api.py`: Module for interacting with the JASPAR database.
-    - `pfm_pwm_converter.py`: Module for converting Position Frequency Matrices (PFM) to Position Weight Matrices (PWM).
-    - `binding_site_finder.py`: Module for scanning DNA sequences for binding sites.
-    - `results_viewer.py`: Module for displaying results in the Streamlit app.
-  - `pages/`: Contains all the pages of the application.
-    - `binding_site_score.py`: Module for showing general information about the transcription factor, as well as finding binding sites based on a user-given DNA sequence.
+   - `app.py`: The main Streamlit application file.
+   - `constants.py`: Contains constants used throughout the project.
+   - `modules/`: Contains all the modules related to the project.
+      - `jaspar_api.py`: Module for interacting with the JASPAR database.
+      - `pfm_pwm_converter.py`: Module for converting Position Frequency Matrices (PFM) to Position Weight Matrices (PWM).
+      - `binding_site_finder.py`: Module for scanning DNA sequences for binding sites.
+   - `pages/`: Contains all the pages of the application.
+      - `binding_site_score.py`: Module for showing general information about the transcription factor, as well as finding binding sites based on a user-given DNA sequence.
+      - `results_viewer.py`: Module for displaying results in the Streamlit app.
 - `tests/`: Contains unit tests for the modules.
-   - `test_jaspar_api.py`: Tests for the JASPAR API
+    - `test_binding_site_finder.py`: Test for scanning sequence for binding sites
+    - `test_jaspar_api.py`: Tests for the JASPAR API
+    - `test_pfm_pwm_converter.py`: Test for conversion of PFM to PWM
 - `requirements.txt`: Lists the dependencies.
-- `README.md`: Contains the project documentation.
+- `pytest.ini`: Configuration file for pytest test runner.
 
 ## Dependencies
 
