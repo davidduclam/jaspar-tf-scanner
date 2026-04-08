@@ -1,6 +1,8 @@
-# JASPAR Transcription Factor Binding Site Scanner
+<h1 align="center">JASPAR Transcription Factor Binding Site Scanner</h1>
 
 This project is a Streamlit web application that allows users to search for transcription factors from the JASPAR database and scan DNA sequences for potential binding sites.
+
+https://github.com/user-attachments/assets/da405679-13e8-410d-a44a-07bfbdddf3fb
 
 ## Features
 
@@ -9,12 +11,6 @@ This project is a Streamlit web application that allows users to search for tran
 - **Fetch Motif Data**: Retrieve motif data for the selected transcription factor.
 - **Enter DNA Sequence**: Input a DNA sequence to scan for binding sites.
 - **Find Binding Sites**: Identify potential binding sites within the DNA sequence.
-
-## Demonstration
-
-Watch the demonstration of the app on YouTube:
-
-[https://youtu.be/k1zaJC9YX-g](https://youtu.be/k1zaJC9YX-g)
 
 ## Usage
 
